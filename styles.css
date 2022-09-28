@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* NAV */
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+.nav__link {
+    padding-right: 8px;
+    text-decoration: none;
+    
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    
+}
+.logo {
+    width: 64px;
+    height: 64px;
+}

@@ -75,6 +75,7 @@ ul {
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-bottom: 48px;
 }
 
 .form--wrapper {
@@ -144,6 +145,7 @@ ul {
 .feature {
     width: calc(100%/3);
     display: flex;
+    padding: 16px;
 }
 
 .feature--description {
@@ -151,6 +153,14 @@ ul {
     flex-direction: column;
 }
 
+
+.feature--icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px;
+    border: 2px solid lightgray;
+    padding: 8px;
+}
 .feature--title {
     font-size: 16px;
 }

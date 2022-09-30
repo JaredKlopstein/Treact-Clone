@@ -151,6 +151,7 @@ ul {
 .feature--description {
     display: flex;
     flex-direction: column;
+    margin-left: 16px;
 }
 
 
@@ -162,11 +163,12 @@ ul {
     padding: 8px;
 }
 .feature--title {
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .feature--para {
-    font-size: 8px;
+    font-size: 16px;
+    width: 80%;
 }
 
 .section--description {
@@ -175,4 +177,20 @@ ul {
     justify-content: center;
     align-items: center;
     margin-bottom: 48px;
+}
+
+/* PROFESSIONALS */
+
+.professionals {
+    display: flex;
+    align-items: center;
+}
+
+.professionals--text {
+
+    width: 50%;
+}
+
+.professionals--image {
+    width: 50%;
 }

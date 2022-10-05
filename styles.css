@@ -19,6 +19,9 @@
     color: purple;
 }
 
+button {
+    cursor: pointer;
+}
 h1 { 
     font-size: 48px;
     font-weight: bold;
@@ -184,6 +187,7 @@ ul {
 .professionals {
     display: flex;
     align-items: center;
+    margin-bottom: 48px;
 }
 
 .professionals--text {
@@ -193,4 +197,123 @@ ul {
 
 .professionals--image {
     width: 50%;
+}
+
+
+/* STEPS */
+
+
+.step {
+    display: flex;
+}
+
+.steps {
+    display: flex;
+}
+
+.steps--wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.steps--img {
+    width: 100%;
+}
+.steps--img--wrapper {
+    width: 50%;
+
+}
+
+
+.feature--description {
+    margin-left: 24px;
+}
+
+/* VALUES */
+
+.values {
+    display: flex;
+}
+
+.value--highlights {
+    display: flex;
+}
+
+.value--title--wrapper {
+    display: flex;
+}
+.value--description {
+    display: flex;
+    flex-direction: column;
+}
+
+.svg {
+    width: 1.5rem;
+}
+
+/* PRICING */
+
+.pricing--wrapper {
+    text-align: center;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.plan--header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px grey solid;
+    padding: 24px;
+    margin: 24px;
+    align-items: center;
+}
+
+.plan--highlights {
+    border-bottom: 1px grey solid;
+    padding: 24px;
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.plan {
+    border: 1px grey solid;
+    width: calc(100%/3);
+    border-radius: 20px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.buy--now {
+    padding: 24px;
+    margin: 24px;
+    border-radius: 9999px;
+}
+
+.name {
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.price {
+    color: black;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.duration {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    opacity: 1;
+}
+
+.highlight {
+    padding: 8px;
 }

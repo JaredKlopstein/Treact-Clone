@@ -16,7 +16,7 @@
 }
 
 .purple {
-    color: purple;
+    color: rgb(100 21 255);
 }
 
 button {
@@ -31,6 +31,10 @@ h1 {
 p {
     font-size: 16px;
     margin-bottom: 24px;
+}
+
+section {
+    margin-bottom: 100px;
 }
 /* NAV */
 
@@ -126,7 +130,7 @@ ul {
 }
 
 .form--button {
-    background-color: #7342d6;
+    background-color: rgb(100 21 255);
     color: #fff;
     padding: 12px 24px;
     font-size: 20px;
@@ -267,14 +271,12 @@ ul {
     flex-direction: column;
     border-bottom: 1px grey solid;
     padding: 24px;
-    margin: 24px;
     align-items: center;
 }
 
 .plan--highlights {
     border-bottom: 1px grey solid;
     padding: 24px;
-    margin: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -314,6 +316,133 @@ ul {
     opacity: 1;
 }
 
+.mainhighlight {
+    font-weight: bold;
+}
+
 .highlight {
     padding: 8px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+    display: flex;
+}
+
+.test--img--wrapper {
+    width: 50%;
+    padding: 24px;
+    display: flex;
+}
+
+.test--wrapper {
+    width: 50%;
+    padding: 24px;
+}
+
+.test__img {
+    width: 75px;
+    height: 75px;
+    border-radius: 9999px;
+}
+
+.test--img--desc {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+}
+
+.test--profile--wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+.test--info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.next--test {
+    display: flex;
+    justify-content: space-around
+}
+
+.fa {
+    padding: 16px;
+    background: lightgray;
+    border-radius: 9999px;
+    margin: 16px;
+}
+
+/* FAQ */
+
+
+.faq--header--wrapper {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.faq--title {
+    font-size: 24px;
+    padding-left: 16px;
+}
+
+.faqs {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    justify-content: space-between;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.faq--wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* CONTACT US */
+
+.contact-us {
+    background-color:rgb(100 21 255);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 8px;
+}
+
+.contact--title {
+    padding: 48px;
+    color: white;
+}
+
+.contact--buttons {
+    display: flex;
+    padding: 24px;
+    justify-content: space-between;
+}
+
+.contact-button:first-of-type {
+    background-color: rgb(245 101 101);
+    border: 1px solid rgb(102, 25, 255);
+}
+
+.contact-button {
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 9999px;
+    border: none;
+    margin: 8px;
+    background-color: rgb(100 21 255);
+    border: 1px solid white;
 }

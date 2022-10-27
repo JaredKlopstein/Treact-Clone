@@ -219,7 +219,7 @@ ul {
     text-align: center;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.625;
     opacity: .5;
 }
 .features {
@@ -391,7 +391,9 @@ ul {
 /* PRICING */
 
 .pricing--wrapper {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .plans {
@@ -402,63 +404,106 @@ ul {
 .plan--header {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px grey solid;
-    padding: 24px;
+    border-bottom: 2px rgb(226, 232, 240) solid;
+    padding: 36px 24px;
     align-items: center;
 }
 
 .plan--highlights {
-    border-bottom: 1px grey solid;
+    border-bottom: 2px rgb(226, 232, 240) solid;
     padding: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.plan--highlight {
+    height: 0.5rem;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+.green--highlight {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+.red--highlight {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
 .plan {
-    border: 1px grey solid;
+    border: 1px solid rgb(226, 232, 240);
     width: calc(100%/3);
-    border-radius: 20px;
-    margin: 16px;
+    border-radius: .5rem;
+    margin: 24px;
     display: flex;
     flex-direction: column;
 }
 
+.plan--main {
+    background-image: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+    color: white;
+}
 .buy--now {
     padding: 24px;
-    margin: 24px;
+    margin: 48px 72px;
     border-radius: 9999px;
+    border: none;
+    color: white;
+    font-weight: 700;
+
 }
 
+.buy--now--main {
+    color:rgb(102, 25, 255)
+}
 .name {
     color: black;
     font-size: 1.25rem;
     font-weight: 700;
 }
 
+.name--main {
+    color: white;
+}
 .price {
     color: black;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
     font-size: 2.25rem;
     font-weight: 700;
+    padding: 16px;
+}
+.price--main {
+    color: white;
 }
 
 .duration {
     font-weight: 700;
     letter-spacing: 0.1em;
+    opacity: .5;
+}
+
+.duration--main {
     opacity: 1;
 }
 
+
+
 .mainhighlight {
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.25rem;
+
 }
 
 .highlight {
     padding: 8px;
+
 }
 
 /* TESTIMONIALS */
 
+.fa-star {
+    color: orange;
+}
 .testimonials {
     display: flex;
 }

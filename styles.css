@@ -635,6 +635,7 @@ ul {
     border-radius: 8px;
     padding: 48px 0;
     align-items: center;
+    margin-bottom: 48px;
 }
 
 .contact--title {
@@ -679,12 +680,12 @@ footer {
 
 }
 .footer {
-    padding: 96px 0;
+    padding: 128px 0;
 }
 .links {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
 }
 
 .link {
@@ -755,3 +756,12 @@ margin-left: 8px;
     display: flex;
     align-items: center;
 }
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+    body {
+      background-color: #de3163;
+    }
+  }

@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-  </head>
+<script src="index.js"></script>  
+</head>
   <body>
     <header>
       <nav class="row">
@@ -32,6 +33,34 @@
               <a href="#" class="nav__link nav__link--primary">Sign Up</a>
             </li>
           </ul>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()">About</a>
+              </li>
+              <li class="menu__list">
+                <a href="#features" class="menu__link" onclick="closeMenu()">Blog</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor" onclick="closeMenu()">Pricing</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor" onclick="closeMenu()">Contact Us</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor" onclick="closeMenu()">Login</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor nav__link--primary" onclick="closeMenu()">Sign Up</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -141,7 +170,7 @@
         <div class="professionals row">
           <div class="prof--wrapper">
             <h2 class="highlight--text purple">QUALITY WORK</h2>
-            <h1 class="section--title">
+            <h1 class="section--title--small">
               Designed & Developed by <span class="purple">Professionals.</span>
             </h1>
             <p class="para--description">
@@ -155,7 +184,7 @@
           <figure class="prof--img--wrapper">
             <img
               class="hero"
-              src="./assets/Screen Shot 2022-09-29 at 2.01.21 PM.png"
+              src="./assets/treact-screenshot.png"
               alt=""
             />
           </figure>
@@ -174,7 +203,7 @@
           </div>
           <div class="steps--wrapper">
             <h2 class="highlight--text purple">STEPS</h2>
-            <h1 class="section--title">Easy to <span class="purple">Get Started.</span></h1>
+            <h1 class="section--title--small">Easy to <span class="purple">Get Started.</span></h1>
             <div class="steps--numbered">
               <div class="step">
                 <h1 class="step--number">01</h1>
@@ -213,7 +242,7 @@
         <div class="values row">
           <div class="value--wrapper">
             <h2 class="highlight--text purple">VALUES</h2>
-            <h1 class="section--title">
+            <h1 class="section--title--small">
               We Always Abide by Our <span class="purple">Principles.</span>
             </h1>
             <p class="para--description">

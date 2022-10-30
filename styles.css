@@ -117,6 +117,73 @@ ul {
     font-weight: 700;
 }
 
+.btn__menu {
+    background-color: transparent;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    color:#160733;
+    display: none;
+}
+
+
+.menu__backdrop {
+    position: fixed;
+    visibility: hidden;
+    background-color: #ffffff;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    top: 15%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem 1.5rem;
+    width: 90%;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    margin-top: 36px;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 36px 0;
+    justify-content: space-around;
+}
+
+.menu__list {
+    padding: 6px 0;
+
+}
+.menu__link {
+    color: black;
+    font-size: 18px;
+    margin: 24px 0;
+
+}
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: rgb(0, 0, 0);
+}
+
 /* LANDING */
 
 .introduction {
@@ -217,7 +284,10 @@ ul {
     font-weight: 900;
     color: rgb(59, 59, 59);
 }
-
+.section--title--small {
+    font-weight: 900;
+    color: rgb(59, 59, 59);
+}
 .highlight--description {
     width: 40%;
     text-align: center;
@@ -758,20 +828,34 @@ margin-left: 8px;
 }
 
 
-/* MOBILE RESPONSIVENESS */
+/* MOBILE RESPONSIVENESS - SMALL SCREENS(PHONES)*/
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .nav__links {
         display: none;
     }
 
+    .nav__logo {
+        letter-spacing: 1px;
+        padding: 8px;
+    }
+
+    .logo {
+        padding: 8px;
+        margin-left: 8px;
+    }
+    .btn__menu {
+        display: block;
+        padding: 16px;
+    }
     .introduction {
         display: flex;
         flex-direction: column;
     }
 
     .intro--title {
-        font-size: 36px;
+        font-size: 30px;
+        margin-top: 16px;
     }
 
     .form--wrapper {
@@ -781,27 +865,47 @@ margin-left: 8px;
 
     .email--wrapper {
         width: 100%;
+        margin-bottom:  100px;
     }
-
+    .trusted--customers {
+        font-size: 12px;
+    }
     .customer--img {
         width: 100%;
         margin-bottom: 48px;
     }
 
+    .hero--wrapper {
+        width: 90%;
+    }
     .section--title {
-        font-size: 36px;
+        font-size: 38px;
         text-align: center;
+        line-height: 1.5;
+    }
+
+    .section--title--small {
+        font-size: 30px;
+        text-align: center;
+        line-height: 1.5;
     }
 
     .highlight--description {
-        font-size: 16px;
-        width: 75%;
+        font-size: 14px;
+        width: 90%;
+        font-weight: 500;
     }
 
     .features {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+
+    .feature--icon {
+        width: 60px;
+        height: 60px;
+        padding: 18px;
     }
 
     .feature {
@@ -813,7 +917,7 @@ margin-left: 8px;
     }
 
     .feature--description {
-        margin: 16px 0;
+        margin: 24px;
         text-align: center;
     }
     
@@ -827,7 +931,8 @@ margin-left: 8px;
     }
 
     .prof--img--wrapper {
-        width: 80%;
+        width: 85%;
+        margin: 36px;
     }
 
     .prof--wrapper {
@@ -838,10 +943,11 @@ margin-left: 8px;
 
     .para--description {
         font-size: 14px;
+        text-align: center;
     }
 
     .prof--button {
-        width: 50%;
+        width: 40%;
         text-align: center;
     }
 
@@ -850,7 +956,7 @@ margin-left: 8px;
         align-items: center;
     }
     .steps--img--wrapper {
-        width: 80%;
+        width: 90%;
     }
 
     .steps--wrapper {
@@ -905,7 +1011,7 @@ margin-left: 8px;
     }
 
     .pricing--wrapper {
-        width: 80%;
+        width: 90%;
         display: flex;
         margin: 0 auto;
     }
@@ -914,16 +1020,19 @@ margin-left: 8px;
         flex-wrap: wrap;
     }
     .plan {
-        width: 90%;
+        width: 80%;
     }
 
+    .buy--now {
+        margin: 32px 42px;
+    }
     .testimonials {
         flex-direction: column;
         align-items: center;
     }
 
     .test--img--wrapper {
-        width: 80%;
+        width: 95%;
     }
 
     .test--wrapper {
@@ -942,7 +1051,7 @@ margin-left: 8px;
     }
 
     .faq--header--wrapper {
-        width: 80%;
+        width: 100%;
     }
 
     .faq--wrapper {
@@ -951,6 +1060,7 @@ margin-left: 8px;
 
     .faq--title {
         padding: 24px;
+        font-weight: 600;
     }
 
     .contact-us {
@@ -960,9 +1070,10 @@ margin-left: 8px;
 
     .contact--title {
         margin: 0;
-        width: 90%;
+        width: 100%;
         padding: 24px;
         text-align: center;
+        font-size: 18px;
     }
 
     .contact--buttons {
@@ -970,7 +1081,7 @@ margin-left: 8px;
         flex-direction: column;
         align-items: center;
         margin: 0;
-        padding: 8px 16px;
+        padding: 6px 16px;
     }
 
     .contact-button {
@@ -985,6 +1096,300 @@ margin-left: 8px;
         width: 30%;
         align-items: center;
         margin: 16px 0;
+    }
+
+    .footer {
+        padding: 64px 0;
+    }
+    .footer-link {
+        padding:0;
+        margin: 8px;
+    }
+
+    .footer--divider {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .footer--info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer--copyright {
+        margin: 36px 0;
+    }
+  }
+
+  /* MOBILE RESPONSIVENESS - TABLETS SCREENS*/
+  @media (min-width:641px) and (max-width: 1024px) {
+    .nav__links {
+        display: none;
+    }
+
+    .nav__logo {
+        letter-spacing: 1px;
+        padding: 8px;
+    }
+
+    .logo {
+        padding: 8px;
+        margin-left: 8px;
+    }
+    .btn__menu {
+        display: block;
+        padding: 16px;
+    }
+    .introduction {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro--title {
+        font-size: 30px;
+        margin-top: 16px;
+    }
+
+    .form--wrapper {
+        width: 80%;
+        text-align: center;
+    }
+
+    .email--wrapper {
+        width: 100%;
+        margin-bottom:  100px;
+    }
+    .trusted--customers {
+        font-size: 12px;
+    }
+    .customer--img {
+        width: 100%;
+        margin-bottom: 48px;
+    }
+
+    .hero--wrapper {
+        width: 90%;
+    }
+    .section--title {
+        font-size: 38px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .section--title--small {
+        font-size: 30px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .highlight--description {
+        font-size: 14px;
+        width: 90%;
+        font-weight: 500;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .feature--icon {
+        width: 60px;
+        height: 60px;
+        padding: 18px;
+    }
+
+    .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .feature--description {
+        margin: 24px;
+        text-align: center;
+    }
+    
+    .feature--para {
+        width: 100%;
+    }
+
+    .professionals {
+        flex-direction: column-reverse;
+
+    }
+
+    .prof--img--wrapper {
+        width: 85%;
+        margin: 36px;
+    }
+
+    .prof--wrapper {
+        width: 80%;
+        align-items: center;
+        padding: 0;
+    }
+
+    .para--description {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .prof--button {
+        width: 40%;
+        text-align: center;
+    }
+
+    .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    .steps--img--wrapper {
+        width: 90%;
+    }
+
+    .steps--wrapper {
+        align-items: center;
+        margin: 0;
+    }
+
+    .step {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .step--number {
+        margin: 0;
+    }
+
+    .values {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .value--img--wrapper {
+        width: 80%;
+        margin-bottom: 24px;
+    }
+
+    .value--wrapper {
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        margin: 0;
+    }
+
+    .value--highlights {
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .value--description {
+        margin: 0;
+    }
+    .value--title--wrapper {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .value--para {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pricing--wrapper {
+        width: 90%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .plans {
+        flex-wrap: wrap;
+    }
+    .plan {
+        width: 80%;
+    }
+
+    .buy--now {
+        margin: 32px 42px;
+    }
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .test--img--wrapper {
+        width: 95%;
+    }
+
+    .test--wrapper {
+        width: 80%;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    .test--info {
+        flex-direction: column;
+    }
+
+    .test--profile--wrapper {
+        flex-direction: column;
+    }
+
+    .faq--header--wrapper {
+        width: 100%;
+    }
+
+    .faq--wrapper {
+        width: 90%;
+    }
+
+    .faq--title {
+        padding: 24px;
+        font-weight: 600;
+    }
+
+    .contact-us {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .contact--title {
+        margin: 0;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .contact--buttons {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 6px 16px;
+    }
+
+    .contact-button {
+        padding: 16px 18px;
+    }
+
+    .links {
+        align-items: center;
+        justify-content: space-around;
+    }
+    .link {
+        width: 30%;
+        align-items: center;
+        margin: 16px 0;
+    }
+
+    .footer {
+        padding: 64px 0;
     }
     .footer-link {
         padding:0;
